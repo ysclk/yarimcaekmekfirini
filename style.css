@@ -1,0 +1,623 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+*{
+    font-family: "Poppins" , sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    text-transform: capitalize;
+    transition: .5s ease;
+}
+
+:root{
+    --arka-plan:#27292a;
+    --logo-mavi:#7a4608;
+    --logo-kasikmavisi:#252728;
+    --renk-gri:#dfa660;
+}
+body{
+    background-color: white;
+ 
+}
+h1{
+    font-size: 2.5rem;
+    color: var(--renk-gri);
+    margin-bottom: 3rem;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top:9rem ;
+    scroll-behavior: smooth; 
+}
+
+.scroller {
+    overflow-y: scroll;
+    scrollbar-color: #0A4C95 #C2D2E4;
+  }
+
+
+.scroller::-webkit-scrollbar{
+    background-color: var(--logo-mavi);
+    width: .8rem;
+}
+.scroller::-webkit-scrollbar-thumb{
+    background-color: red;
+    border-radius: 3rem;
+}
+.scroller::-webkit-scrollbar-track{
+    background-color: red;
+
+}
+section{
+    padding: 3.5rem;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 2.75rem;
+    border-radius: 30rem;
+    font-size: 1.7rem;
+    color: var(--renk-gri);
+    background-color:var(--logo-kasikmavisi) ;
+    cursor: pointer;
+}
+.btn:hover{
+    opacity: .4;
+}
+
+.search-input{
+    font-size: 1.6rem;
+    color: var(--arka-plan);
+    border-radius: 3rem;
+    padding: 1rem;
+    text-transform: none;
+  
+}
+
+.heading{
+    color: black;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-size: 4rem;
+    margin-bottom: 3.5rem;
+    border-bottom: .1rem solid var(--renk-gri);
+
+}
+
+#menu-btn{
+    display: none;
+}
+
+
+/*header start*/
+.search-form{
+    position: absolute;
+    top: 115%;
+    right: 10%;
+    background-color: #fff;
+    width: 40rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 3rem;
+    transform: scaleY(0);
+    border: .1rem solid var(--logo-mavi);
+
+}
+.search-form.active{
+    transform: scaleY(1);
+
+}
+.search-form input{
+    border: none;
+    margin-left: 4rem;
+    width: 30rem;
+    height: 100%;
+}
+.search-form i{
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color: black;
+}
+
+
+.header .logo img{
+    width: 12rem;
+}
+
+.header{
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 7%;
+    margin: 2rem 7%;
+    border-radius: 30rem;
+    box-shadow: .8rem .7rm .9rem 0rem rgba(0,0,0,0.75);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.header .navbar a{
+    margin: 0 1rem;
+    color: black;
+    border-bottom: .1rem solid transparent;
+
+}
+.header .navbar.active{
+    display: block;
+    right: 3rem;
+}
+
+.header .navbar a:hover,
+.header .navbar .active{
+    border-color: black;
+    padding-bottom:.5rem;
+ 
+}
+
+.header .buttons button {
+    border: none;
+    margin: 0 1rem;
+    color: black;
+    background: transparent;
+    font-size: 2rem;
+    cursor: pointer;
+    
+}
+
+.cart-items-container{
+    position: absolute;
+    top: 95%;
+    height: calc(100vh - 9rem);
+    width: 35rem;
+    background-color: var(--renk-gri);
+    box-shadow: 0px 20px 14px 0px rgb(0 0 0 / 75%);
+    right: -100%;;
+}
+.cart-items-container.active{    
+    right: 3rem;
+}
+.cart-items-container .cart-item{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+.cart-items-container .cart-item:hover{
+    box-shadow: 0px 20px 14px 0px rgb(0 0 0 / 75%);
+}
+.cart-items-container .cart-item img{
+    height: 7rem;
+    width: 7rem;
+}
+.cart-items-container .cart-item .content h3{
+    font-size: 2rem;
+    color: black;
+    padding-bottom: .5rem;
+    
+}
+.cart-items-container .cart-item .content .price{
+    font-size: 1.5rem;
+    color: black;
+  
+
+}
+.cart-items-container .btn{
+    width: 100%;
+    text-align: center;
+    border-radius: unset;
+  
+
+}
+.cart-items-container .cart-item i{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: black;
+}
+/*header end */
+
+/*anasayfa baslangic */
+
+.yukaricik{
+    width: 5rem;
+    height: 5rem;
+    color: var(--logo-kasikmavisi);
+    font-size: 3rem;
+    background-color: var(--logo-mavi);
+    display: flex;
+    text-align: center;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    margin-right: 2.5rem;
+    margin-bottom: 2.5rem;
+    z-index: 1000;
+    position: fixed;
+    cursor: pointer;
+    display: none;
+  
+}
+.yukaricik:hover{
+    background-color: #dfa660;
+}
+
+.goster{
+    display: block;
+}
+
+.anasayfa{
+    min-height: 100vh;
+    background: url(images/anasayfaresim.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: -14.1rem;
+    display: flex;
+    align-items: center;
+    
+}
+
+.anasayfa-kapsam{
+    max-width: 60rem;
+    
+}
+
+.anasayfa-kapsam h3{
+    font-size: 6rem;
+    color: var(--logo-kasikmavisi) ;
+}
+
+.anasayfa-kapsam p{
+    font-size: 2rem;
+    color:var(--arka-plan) ;
+    line-height: 3rem;
+    font-weight:500;
+    padding: 1rem 0;
+}
+/*anasayfa son */
+
+/*hakkimizda basla */
+.hakkimizda .hakkimizda-kapsam{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    
+}
+.hakkimizda .hakkimizda-kapsam .himage{
+    flex: 1 1 45rem;
+
+}
+.hakkimizda .hakkimizda-kapsam .yan{
+    flex: 1 1 45rem;
+    background-color: var(--renk-gri);
+    padding: 2rem;
+}
+.hakkimizda .hakkimizda-kapsam .yan h3{
+    font-size: 3rem;
+    color: var(--logo-kasikmavisi);
+}
+.hakkimizda .hakkimizda-kapsam .yan p{
+    font-size: 1.6rem;
+    color: var(--logo-kasikmavisi);
+    padding: 1rem 0;
+    line-height: 1.8rem;
+}
+.hakkimizda .hakkimizda-kapsam .himage img{
+    width: 100%;
+    height: 100%;
+    background-color: red;
+}
+/*hakkimizda son */
+
+/*ekmekler baslangic */
+
+.ekmekler .ekmekler-kapsam{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:2rem;
+}
+
+.ekmekler .ekmekler-kapsam .ekmekler-konteynir .tarifler-baslik img{
+    width: 100%;
+    object-fit: cover;
+    height: 40rem;
+}
+.ekmekler .ekmekler-kapsam .ekmekler-konteynir{
+    padding: 3rem;
+    background-color: var(--renk-gri);
+    border-radius: 3rem;
+    min-height: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.ekmekler .ekmekler-kapsam .ekmekler-konteynir h3{
+    font-size: 3rem;
+    padding: 1rem 0;
+
+}
+.ekmekler .ekmekler-kapsam .ekmekler-konteynir .tarif-kategori{
+    font-size: 1.2rem;
+}
+
+
+.ekmekler .ekmekler-kapsam .ekmekler-konteynir .fiyat{
+    font-size: 2.5rem;
+    padding: .5rem 0;
+}
+
+.ekmekler .ekmekler-kapsam .ekmekler-konteynir .fiyat span{
+    text-decoration: line-through;
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+/*ekmekler son */
+
+
+
+/*kurabiyeler baslangic */
+.kurabiyeler .kurabiye-kapsam{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:2rem;
+}
+
+.kurabiyeler .kurabiye-kapsam .kurabiye-konteynir{
+    text-align: center;
+    background-color: var(--renk-gri);
+    position: relative;
+    border-radius: 3rem;
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem;
+}
+
+.kurabiyeler .kurabiye-kapsam .kurabiye-konteynir .videobaslik{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+}
+
+.kurabiyeler .kurabiye-kapsam .kurabiye-konteynir .videobaslik .baslik{
+    font-size: 1.4rem;
+}
+
+.kurabiyeler .kurabiye-kapsam .kurabiye-konteynir .videobaslik .name{
+    font-weight: bold;
+    font-size: 4rem;
+    text-align: start;
+    color: var(--logo-kasikmavisi);
+    overflow-wrap:anywhere ;
+
+}
+.kurabiyeler .kurabiye-kapsam .kurabiye-konteynir .image img{
+   top: 0;
+   width: 100%;
+   left: 0;
+   height: 100%;
+   transform: unset;
+    object-fit: cover;
+    border-radius: 3rem;
+    position: absolute;
+
+}
+.kurabiyeler .kurabiye-kapsam .kurabiye-konteynir .image{
+    width: 100%;
+    height: 40rem;
+    position: relative;
+    border-radius: 3rem;  
+}
+
+/*kurabiyeler son */
+
+/*iletisim baslangic */
+.contact .contact-content{
+    display: flex;
+    background-color: var(--arka-plan);
+    flex-wrap: wrap;
+    gap: 8rem;
+}
+
+.contact .contact-content .map{
+    flex: 1 1 45rem;
+    object-fit: cover;
+   
+}
+.contact .contact-content form{
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+.contact .contact-content form h3{
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color: var(--renk-gri)
+}
+.contact .contact-content form .inputBox{
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    border: var(--renk-gri);
+}
+.contact .contact-content form .inputBox i{
+    color:var(--renk-gri);
+    font-size: 2rem;
+    padding: 0 2rem ;
+}
+.contact .contact-content form .inputBox input{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: var(--renk-gri);
+    text-transform: none;
+    background: none;
+}
+
+/*iletisim son */
+
+/*Footer baslangic*/
+.footer{
+    background-color: var(--arka-plan);
+    text-align: center;
+
+}
+
+.footer .search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .search .search-input{
+  width: 30rem;
+  color: black;
+  border: .2rem solid rgba(0,0,0,.5);
+}
+.footer .search  .arabuton{
+    width: 15rem;
+    color: var(--renk-gri);
+    border: .2rem solid rgba(0,0,0,.5);
+    padding: 1.2rem;
+    border-radius: 20rem;
+    margin-left: .7rem;
+    background-color: var(--logo-kasikmavisi);
+    cursor: pointer;
+}
+.footer .search  .arabuton:hover{
+    color: var(--logo-kasikmavisi);
+    background-color: var(--renk-gri);
+}
+
+.footer .share{
+    padding: 2rem 0;
+}
+.footer .share a {
+    padding: .3rem .7rem;
+    line-height: 5rem;
+    width: 5rem;
+    height: 5rem;
+    align-items: center;
+    color: var(--logo-mavi);
+    font-size: 3rem;
+    border: .1rem solid black;
+    border-radius: 50%;
+    margin: 0.5rem;
+
+}
+.footer .links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  
+}
+.footer .links a{
+    background-color: var(--renk-gri);
+    padding: .7rem 2rem;
+    color: var(--arka-plan);
+    font-size: 2rem;
+    border: var(--renk-gri);
+}
+.footer .links a:hover{
+    background-color: var(--arka-plan);
+    opacity: .7;
+    color: var(--renk-gri);
+}
+
+.footer .share a:hover{
+    background-color:var(--renk-gri);
+}
+
+.footer .created{
+    font-size: .2rem;
+    color: var(--logo-mavi);
+    font-weight: 300;
+    margin-top: .9rem;
+    padding-top: 1-5rem;
+
+}
+
+.footer .created span{
+
+    color: black;
+  
+
+}
+/*Footer son*/
+
+/*Responsive baslangic*/
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding: 1.5rem 2rem ;
+    }
+
+    .header .logo img{
+        height: 7rem;
+    }
+    section{
+        padding: 2rem;
+    }
+
+   
+}
+@media (max-width:819px){
+ #menu-btn{
+    display: inline-block;
+ }
+ .header .navbar{
+    position: absolute;
+    top:95%;
+    background-color: #fff;
+    height: calc(100vh-9rem);
+    width: 30rem;
+    box-shadow: 0px 20px 14px 0px rgb(0 0 0 / 75%);
+    right: -100%;
+ }
+ .header .navbar a{
+    display: block;
+    margin: 1.5rem;
+    padding: .5rem;
+    font-size: 2rem;
+
+ }
+ .header .navbar a.active{
+    right: 3rem;
+
+ }
+
+}
+
+@media (max-width:768px){
+    html {
+        font-size: 50%;
+    }
+    #menu-btn{
+        display:inline-block;
+    }
+}
+/*Responsive son*/
